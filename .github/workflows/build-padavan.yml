@@ -1,4 +1,4 @@
-#修改TNAME: K2P 中的K2P为你需要编译的型号，注意名称要与configs/templates/目录下的名字相同
+#修改TNAME: K2P 中的K2P为你需要编译的型号，注意名称要与configs/templates/目录下的名字相同  MI-R3G
 name: Build Padavan
 
 on: 
@@ -35,8 +35,8 @@ jobs:
         KERNEL: 4.4
       run: |
         if [ $KERNEL = "4.4" ] ; then
-        git clone --depth=1 https://github.com/tsl0922/padavan.git /opt/rt-n56u
-        #git clone --depth=1 https://github.com/MeIsReallyBa/padavan-4.4.git /opt/rt-n56u
+        #git clone --depth=1 https://github.com/tsl0922/padavan.git /opt/rt-n56u
+        git clone --depth=1 https://github.com/MeIsReallyBa/padavan-4.4.git /opt/rt-n56u
         else
         git clone --depth=1 https://github.com/chongshengB/rt-n56u.git /opt/rt-n56u
         fi
@@ -45,7 +45,7 @@ jobs:
         mkdir -p /opt/images/
     - name: Build Firmware
       env:
-        TNAME: MI-R3G
+        TNAME: K2P
         KERNEL: 4.4
       run: |
         cd /opt/rt-n56u/trunk
