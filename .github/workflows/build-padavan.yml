@@ -1,5 +1,5 @@
 #修改TNAME: K2P 中的K2P为你需要编译的型号，注意名称要与configs/templates/目录下的名字相同  MI-R3G
-name: Build Padavan hanwckf
+name: Build Padavan
 
 on: 
   release:
@@ -132,5 +132,5 @@ jobs:
       uses: actions/upload-artifact@master
       if: always()
       with:
-        name: Padavan-packages
+        name: Padavan-hanwckf
         path: /opt/images
